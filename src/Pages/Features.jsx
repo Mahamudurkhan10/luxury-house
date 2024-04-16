@@ -18,7 +18,7 @@ const Features = () => {
                     Where turquoise waters  lap against sandy shores.
                      </p>
               </div>
-               <div className="grid mt-6 grid-cols-3 gap-9">
+               <div className="grid mt-6 grid-cols-3 gap-5">
                     {
                          cards.map(card =><Card key={card.id} card={card}></Card>)
                     }

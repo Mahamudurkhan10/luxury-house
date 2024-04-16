@@ -1,0 +1,86 @@
+[
+     {
+       "id": 1,
+       "estate_title": "Oceanfront Luxury Villa",
+       "segment_name": "Villas",
+       "description": "Experience unparalleled luxury in this stunning oceanfront villa, offering panoramic views of the azure waters and direct beach access.",
+       "price": "$7,500,000",
+       "status": "sale",
+       "area": "7000 sq ft",
+       "location": "Maui, Hawaii",
+       "facilities": ["Infinity Pool", "Private Beach", "Gourmet Kitchen", "Home Theater"],
+       "image": "https://i.ibb.co/9wh99Qj/large-No-1.jpg"
+     },
+     {
+       "id": 2,
+       "estate_title": "Luxury Penthouse in Dubai",
+       "segment_name": "Penthouse",
+       "description": "Indulge in the epitome of luxury living with this extravagant penthouse boasting unparalleled views of the Dubai skyline and world-class amenities.",
+       "price": "$12,000,000",
+       "status": "sale",
+       "area": "6000 sq ft",
+       "location": "Dubai, UAE",
+       "facilities": ["Private Pool", "Sky Garden", "Personal Butler Service", "Spa"],
+       "image": "https://i.ibb.co/72sn9M4/Web2500-23.webp"
+     },
+     {
+       "id": 3,
+       "estate_title": "Exclusive Mansions in Bel Air",
+       "segment_name": "Mansions",
+       "description": "Elegant and grand, this exclusive mansion in Bel Air offers unmatched luxury living with expansive interiors, lush gardens, and unparalleled privacy.",
+       "price": "$20,000,000",
+       "status": "sale",
+       "area": "10000 sq ft",
+       "location": "Los Angeles, California",
+       "facilities": ["Tennis Court", "Wine Cellar", "Guest House", "Home Gym"],
+       "image": "https://i.ibb.co/mcy0YVg/hq720.jpg"
+     },
+     {
+       "id": 4,
+       "estate_title": "Luxury Beachfront properties in the French Alps",
+       "segment_name": "Beachfront properties",
+       "description": "Escape to this luxurious chalet nestled in the French Alps, offering unparalleled ski-in and breathtaking mountain views.",
+       "price": "$9,500,000",
+       "status": "sale",
+       "area": "5500 sq ft",
+       "location": "Chamonix, France",
+       "facilities": ["Sauna", "Ski Room", "Cinema Room", "Wine Cellar"],
+       "image": "https://i.ibb.co/tpkPFF3/unnamed.jpg"
+     },
+     {
+       "id": 5,
+       "estate_title": "Waterfront resorts in Miami",
+       "segment_name": " resorts",
+       "description": "Discover the epitome of luxury living in this stunning waterfront mansion in Miami, featuring lavish interiors and breathtaking views of the bay.",
+       "price": "$18,000,000",
+       "status": "sale",
+       "area": "9000 sq ft",
+       "location": "Miami, Florida",
+       "facilities": ["Private Dock", "Infinity Pool", "Gym", "Home Office"],
+       "image": "https://i.ibb.co/NWgStGt/Soneva-Fushi.jpg"
+     },
+     {
+       "id": 6,
+       "estate_title": "Luxury Ski Chalet in Aspen",
+       "segment_name": "Chalet",
+       "description": "Escape to the winter wonderland of Aspen in this luxurious ski chalet, featuring rustic elegance, mountain views, and ski-in/ski-out access.",
+       "price": "$11,000,000",
+       "status": "sale",
+       "area": "6500 sq ft",
+       "location": "Aspen, Colorado",
+       "facilities": ["Hot Tub", "Ski Room", "Fireplace", "Home Theater"],
+       "image": "https://i.ibb.co/XsyDXhz/salamandra-hotel-spolocenska-miestnost-chalet.jpg"
+     },
+     {
+       "id": 7,
+       "estate_title": "Secluded Island Retreat",
+       "segment_name": "private islands",
+       "description": "Discover ultimate privacy and luxury in this secluded island retreat, offering pristine beaches, lush landscapes, and unparalleled tranquility.",
+       "price": "$25,000,000",
+       "status": "sale",
+       "area": "12000 sq ft",
+       "location": "Bora Bora, French Polynesia",
+       "facilities": ["Private Beach", "Infinity Pool", "Tropical Gardens", "Yoga Pavilion"],
+       "image": "https://i.ibb.co/3km81tC/maxresdefault.jpg"
+     }
+   ]

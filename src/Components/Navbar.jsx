@@ -1,13 +1,14 @@
 import { NavLink } from "react-router-dom";
-
+import { FaHome } from "react-icons/fa";
+import { LuLogOut } from "react-icons/lu";
 
 
 const Navbar = () => {
      const Navbar = <>
-         <NavLink> <li><a> Home</a></li></NavLink>
-         <NavLink> <li><a> UserInformation</a></li></NavLink>
-         <NavLink> <li><a> Update Profile</a></li></NavLink>
-         <NavLink> <li><a> Adjoin </a></li></NavLink>
+         <NavLink to={'/'}> <li><a> Home</a></li></NavLink>
+         <NavLink to={'/userInfo'}> <li><a> UserInformation</a></li></NavLink>
+         <NavLink to={'/updateP'}> <li><a> Update Profile</a></li></NavLink>
+         <NavLink to={'/adjoin'}> <li><a> Adjoin </a></li></NavLink>
        
              
            
@@ -23,7 +24,7 @@ const Navbar = () => {
                 {Navbar}
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <FaHome></FaHome>  <NavLink to={'/'}>  <a className="btn btn-ghost text-xl">Luxury <span>Home</span></a></NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
@@ -31,7 +32,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn">Button</a>
+              
+            <a className="btn">  <LuLogOut></LuLogOut> Log Out</a>
           </div>
         </div>
      );

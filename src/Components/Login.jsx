@@ -22,11 +22,12 @@ const Login = () => {
      console.log(email,password);
      loginPass(email,password)
      .then(result =>{
-          setSuccess(alert('login done'))
+          setSuccess(alert('login done',result))
           navigate(location?.state ? location.state : '/')
      })
      .catch(error =>{
           setError(error.message)
+
      })
  }
  const handleGoogleLogin = ()=>{
@@ -51,7 +52,7 @@ const Login = () => {
                               <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                              
                          </div>
-                         <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-green-600">Sign in</button>
+                         <button className="block w-full p-3 text-center rounded-sm dark:text-gray-50 dark:bg-green-600">Login</button>
                     </form>
                     <div className="flex items-center pt-4 space-x-1">
                          <div className="flex-1 h-px sm:w-16 dark:bg-gray-300"></div>

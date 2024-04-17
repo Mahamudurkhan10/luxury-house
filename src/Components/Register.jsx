@@ -3,6 +3,8 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 AOS.init()
 
@@ -21,22 +23,21 @@ const Register = () => {
           const name = e.target.username.value
           const photo = e.target.photo.value
           console.log(email, password, name, photo)
-          register(email, password)
+          if (/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/.test(password)) {
+            
+               register(email, password)
                .then(() => {
                     updatePP(name, photo)
                     navigate(location?.state ? location.state : '/')
 
                })
-
-
-          if (/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/.test(password)) {
-               setError(alert('your account register.'));
           }
           else{
-               setError(alert('give me vaild password'))
-
+               setError(toast('give me vaild password'))
+               return
           }
-          setError('')
+         
+            setError('') 
      }
      return (
           <div data-aos="flip-down" data-aos-delay="200">
@@ -69,8 +70,9 @@ const Register = () => {
                     <p className="text-xs text-center sm:px-6 dark:text-gray-600"> Already have an account?
                          <NavLink to={'/login'}>  <a rel="noopener noreferrer" href="#" className="underline text-sm dark:text-green-800 font-semibold">Login Here</a></NavLink>
                     </p>
-
+                  
                </div>
+               <ToastContainer></ToastContainer>
           </div>
      );
 };

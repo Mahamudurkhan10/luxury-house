@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 
 const Login = () => {
      const {loginPass ,googleLogin, githubLogin}=useContext(AuthContext)
      const [success,setSuccess]= useState('')
      const [ error , setError]= useState('')
-  
+     const location = useLocation()
+     const navigate = useNavigate()
  const handleLogin = (e)=>{
      e.preventDefault()
      const email = e.target.email.value
@@ -15,6 +16,7 @@ const Login = () => {
      loginPass(email,password)
      .then(result =>{
           setSuccess(alert('login done'))
+          navigate(location?.state ? location.state : '/')
      })
      .catch(error =>{
           setError(error.message)
@@ -22,9 +24,11 @@ const Login = () => {
  }
  const handleGoogleLogin = ()=>{
      googleLogin()
+     navigate(location?.state ? location.state : '/')
  }
  const handleGitHubLogin = ()=>{
      githubLogin()
+     navigate(location?.state ? location.state : '/')
  }
      return (
           <div>

@@ -1,10 +1,13 @@
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 
 
 const Register = () => {
      const {register, updatePP}= useContext(AuthContext)
+     const [error , setError]= useState('')
+     const location = useLocation()
+     const navigate = useNavigate()
      const handleRegister = (e)=>{
           e.preventDefault()
           const email = e.target.email.value
@@ -15,7 +18,14 @@ const Register = () => {
           register(email,password)
           .then(()=>{
                updatePP(name,photo)
+               navigate(location?.state ? location.state : '/')
+               // if (/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/.test(password)) {
+               //      setError('Your account registered.');
+               //  } else {
+               //      setError('Please provide a valid password.');
+               //  }
           })
+         
      }
      return (
           <div>

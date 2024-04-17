@@ -5,7 +5,7 @@ const Card = ({ card }) => {
      
      
      return (
-          <div>
+          <div data-aos="flip-down" data-aos-delay="500">
                <div className="card p-7  bg-green-50 shadow-xl">
                     <figure><img src={card.image} className="h-[250px]" alt="Shoes" /></figure>
                     <div className="card-body">

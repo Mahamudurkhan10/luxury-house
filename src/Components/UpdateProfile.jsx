@@ -1,9 +1,12 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
 
 
 const UpdateProfile = () => {
+     useEffect(()=>{
+		document.title='UpdateProfile'
+	},[])
      const {updatePP}=useContext(AuthContext)
 const handleUpdateP = (e)=>{
      e.preventDefault()

@@ -1,7 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../AuthProvider/Auth';
 
 const UserInfo = () => {
+     useEffect(()=>{
+		document.title='UserInformation'
+	},[])
      const { user } = useContext(AuthContext)
      console.log(user)
      return (

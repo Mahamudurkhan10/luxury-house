@@ -11,10 +11,10 @@ const Navbar = () => {
     logOut()
   }
   const Navbar = <>
-    <NavLink to={'/'}> <li><a> Home</a></li></NavLink>
-    <NavLink to={'/userInfo'}> <li><a> UserInformation</a></li></NavLink>
-    <NavLink to={'/updateP'}> <li><a> Update Profile</a></li></NavLink>
-    <NavLink to={'/adjoin'}> <li><a> Adjoin </a></li></NavLink>
+    <NavLink className={'font-semibold'} to={'/'}> <li><a> Home</a></li></NavLink>
+    <NavLink className={'font-semibold'} to={'/userInfo'}> <li><a> UserInformation</a></li></NavLink>
+    <NavLink className={'font-semibold'} to={'/updateP'}> <li><a> Update Profile</a></li></NavLink>
+    <NavLink className={'font-semibold'} to={'/adjoin'}> <li><a> Adjoin </a></li></NavLink>
 
 
 

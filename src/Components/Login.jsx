@@ -1,8 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/Auth";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+
+AOS.init()
 const Login = () => {
+     useEffect(()=>{
+         document.title = 'Login'
+     },[])
      const {loginPass ,googleLogin, githubLogin}=useContext(AuthContext)
      const [success,setSuccess]= useState('')
      const [ error , setError]= useState('')
@@ -31,8 +38,8 @@ const Login = () => {
      navigate(location?.state ? location.state : '/')
  }
      return (
-          <div>
-               <div className="w-full max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-green-50 dark:text-gray-800">
+          <div data-aos="flip-down" data-aos-delay="200">
+               <div className="w-full mt-10 max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-green-50 dark:text-gray-800">
                     <h1 className="text-2xl font-bold text-green-700 text-center">Login Here</h1>
                     <form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
                          <div className="space-y-1 text-sm">

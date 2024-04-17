@@ -1,7 +1,12 @@
+
+import { useEffect } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
 
 const CardDeatails = () => {
+     useEffect(()=>{
+        document.title = 'CardDeatails'
+     })
      const cards = useLoaderData();
      const { id } = useParams();
      const newId = parseInt(id)

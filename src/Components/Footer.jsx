@@ -1,10 +1,11 @@
 import { FaHome } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
      return (
           <footer className="footer mt-7 p-10 bg-gray-800 text-white">
           <aside>
-            <FaHome className="text-3xl"></FaHome>  <p className="text-3xl text-green-500">Luxury <span className="text-green-100">Home</span></p>
+            <FaHome className="text-3xl"></FaHome> <NavLink to={'/'}> <button className="btn-ghost"> <p className="text-3xl text-green-500">Luxury <span className="text-green-100">Home</span></p></button> </NavLink>
           </aside> 
           <nav>
             <h6 className="footer-title">Services</h6> 

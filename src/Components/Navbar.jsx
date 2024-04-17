@@ -1,9 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
+import { useContext } from "react";
+import { AuthContext } from "../AuthProvider/Auth";
 
 
 const Navbar = () => {
+  const { logOut, user } = useContext(AuthContext)
+  const handleLogOut = () => {
+    logOut()
+  }
   const Navbar = <>
     <NavLink to={'/'}> <li><a> Home</a></li></NavLink>
     <NavLink to={'/userInfo'}> <li><a> UserInformation</a></li></NavLink>
@@ -14,7 +20,7 @@ const Navbar = () => {
 
   </>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar mt-11 bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -24,7 +30,7 @@ const Navbar = () => {
             {Navbar}
           </ul>
         </div>
-        <FaHome></FaHome>  <NavLink to={'/'}>  <a className="btn btn-ghost text-xl">Luxury <span>Home</span></a></NavLink>
+        <FaHome></FaHome>  <NavLink to={'/'}>  <a className="btn btn-ghost text-xl  text-green-500">Luxury <span className="text-gray-500">Home</span></a></NavLink>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -33,7 +39,19 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
 
-        <Link to={'/login'}><a className="btn">  <LuLogOut ></LuLogOut> Log Out</a></Link>
+
+        {
+          user ? (
+            <>
+            <div className="tooltip" data-tip={user?.displayName|| 'not fount'}> <span> <img className="rounded-full size-10 mr-3 border-2 border-red-600" src= { user?.photoURL ||"https://i.ibb.co/YX7cm4v/bd886d7ccc6f8dd8db17e841233c9656.jpg"} alt="" /> </span></div>
+             <a href="" onClick={handleLogOut} className="btn"> <LuLogOut></LuLogOut> LogOUt</a>
+            </>
+          ):(
+            <Link to={'/login'}>
+              <a href="" className="btn"> <LuLogOut></LuLogOut> Log In </a>
+            </Link>
+          )
+        }
       </div>
     </div>
   );

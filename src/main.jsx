@@ -14,6 +14,8 @@ import Adjoin from './Components/Adjoin.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import CardDeatails from './Pages/CardDeatails.jsx';
+import Auth from './AuthProvider/Auth.jsx';
+import Private from './Root/Private.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,15 +27,15 @@ const router = createBrowserRouter([
       },
       {
         path: '/userInfo',
-        element: <UserInfo></UserInfo>
+        element: <Private><UserInfo></UserInfo></Private>
       }
       , {
         path: '/updateP',
-        element: <UpdateProfile></UpdateProfile>
+        element: <Private><UpdateProfile></UpdateProfile></Private>
       },
       {
         path: '/adjoin',
-        element: <Adjoin></Adjoin>
+        element: <Private><Adjoin></Adjoin></Private>
       },
       {
         path: '/login',
@@ -44,7 +46,7 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },{
         path:'/:id',
-        element:<CardDeatails></CardDeatails>,
+        element:<Private><CardDeatails></CardDeatails></Private>,
         loader:()=>fetch('luxury.json')
       }
     ]
@@ -52,6 +54,6 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+   <Auth> <RouterProvider router={router}></RouterProvider></Auth>
   </React.StrictMode>,
 )

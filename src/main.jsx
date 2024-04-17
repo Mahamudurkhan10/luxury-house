@@ -16,10 +16,12 @@ import Register from './Components/Register.jsx';
 import CardDeatails from './Pages/CardDeatails.jsx';
 import Auth from './AuthProvider/Auth.jsx';
 import Private from './Root/Private.jsx';
+import Error from './Pages/Error.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Error></Error>,
     children: [
       {
         path: '/',

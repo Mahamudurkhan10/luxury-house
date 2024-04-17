@@ -5,7 +5,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa6";
 AOS.init()
 
 const Register = () => {
@@ -14,6 +15,7 @@ const Register = () => {
       },[])
      const { register, updatePP } = useContext(AuthContext)
      const [error, setError] = useState('')
+     const [ showPass, setShowPass]=useState(false)
      const location = useLocation()
      const navigate = useNavigate()
      const handleRegister = (e) => {
@@ -48,10 +50,12 @@ const Register = () => {
                               <label htmlFor="username" className="block dark:text-gray-600">Username</label>
                               <input type="text" name="username" id="username" placeholder="Username" className="w-full px-4 py-3 rounded-md border dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
                          </div>
-                         <div className="space-y-1 text-sm">
+                         <div className=" relative space-y-1 text-sm">
                               <label htmlFor="password" className="block dark:text-gray-600">Password</label>
-                              <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
-
+                              <input type={showPass?'text':'password'} name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600" />
+                            <span className="absolute top-1/2 right-2" onClick={()=> setShowPass(!showPass)}> {
+                              showPass?<FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>
+                            } </span>
                          </div>
                          <div className="space-y-1 text-sm">
                               <label htmlFor="email" className="block dark:text-gray-600">Email</label>

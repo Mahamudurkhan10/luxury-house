@@ -9,6 +9,7 @@ const Features = () => {
           .then(res =>res.json())
           .then(data => setCards(data))
      },[])
+    
      return (
           <div>
               <div  >

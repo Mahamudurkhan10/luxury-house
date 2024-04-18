@@ -42,7 +42,7 @@ const Login = () => {
  }
      return (
           <div data-aos="flip-down" data-aos-delay="200">
-               <div className="w-full mt-10 max-w-md mx-auto p-8 space-y-3 rounded-xl dark:bg-green-50 dark:text-gray-800">
+               <div className="w-full mt-10  lg:max-w-md lg:mx-auto p-8 space-y-3 rounded-xl dark:bg-green-50 dark:text-gray-800">
                     <h1 className="text-2xl font-bold text-green-700 text-center">Login Here</h1>
                     <form onSubmit={handleLogin} noValidate="" action="" className="space-y-6">
                          <div className="space-y-1 text-sm">

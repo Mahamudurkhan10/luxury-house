@@ -14,8 +14,8 @@ const CardDeatails = () => {
 
      return (
           <div>
-               <div className="card card-side space-x-10 bg-gray-200 shadow-xl">
-                    <figure><img src={card.image} className="h-[550px] p-5" alt="Movie" /></figure>
+               <div className="lg:card mt-9 card-side space-x-10 bg-gray-200 shadow-xl">
+                    <figure><img src={card.image} className="lg:h-[550px] p-5" alt="Movie" /></figure>
                     <div className=" text-xl p-7">
                        
                          <h2 className=" mt-4 text-2xl text-blue-500"> {card.segment_name} </h2>
